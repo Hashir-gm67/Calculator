@@ -1,0 +1,176 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.light-mode {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: #f4f4f4;
+}
+
+.header {
+    width: 98%;
+    background-color: #444; /* Default background color */
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.header.dark-mode {
+    background-color: #222;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar h1 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #fff;
+}
+
+.navbar i {
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+body.light-mode .navbar i {
+    color: #fff;
+}
+
+.calculator {
+    width: 260px;
+    background-color: #444;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(85, 82, 82, 0.5);
+    margin-top: 20px;
+}
+
+.mode-toggle {
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+#display {
+    width: 100%;
+    height: 40px;
+    background-color: #222;
+    color: #fff;
+    text-align: right;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.buttons button {
+    width: 100%;
+    height: 50px;
+    background-color: #555;
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.buttons button:hover {
+    background-color: #666;
+}
+
+button.zero {
+    grid-column: span 2;
+    border-radius: 25px;
+}
+
+/* Scientific buttons */
+.sci-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.sci-buttons button {
+    width: 100%;
+    height: 50px;
+    background-color: #888; /* Uniform color for all scientific buttons */
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sci-buttons button:hover {
+    background-color: #999;
+}
+
+/* Hide scientific buttons by default */
+.hidden {
+    display: none;
+}
+
+/* Specific button colors */
+.buttons button:nth-child(1) { /* "C" button */
+    background-color: #ff9800;
+}
+
+.buttons button:nth-child(2) { /* "DEL" button */
+    background-color: #f44336;
+}
+
+.light-mode .calculator {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.light-mode .buttons button {
+    background-color: #ddd;
+    color: #333;
+}
+
+.light-mode .buttons button:hover {
+    background-color: #ccc;
+}a
+
+.light-mode #display {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Adjust colors for specific buttons in light mode */
+.light-mode .buttons button:nth-child(1) { /* "C" button */
+    background-color: #ff9800;
+    color: #fff;
+}
+
+.light-mode .buttons button:nth-child(2) { /* "DEL" button */
+    background-color: #f44336;
+    color: #fff;
+}
